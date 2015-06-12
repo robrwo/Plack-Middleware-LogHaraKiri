@@ -1,0 +1,43 @@
+=head1 NAME
+
+Plack::Middleware::LogHarakiri - log when a process is killed
+
+=head1 SYNOPSIS
+
+  use Plack::Builder;
+
+  builder {
+
+    enable "LogHarakiri";
+    enable "SizeLimit",  ...;
+
+    $app;
+  };
+
+=head1 DESCRIPTION
+
+This middleware is a companion to L<Plack::Middleware::SizeLimit> that
+emits a warning when a process is killed.
+
+When it detects that the current process is killed, it will emit a
+warning with diagnostic information.
+
+=head1 SEE ALSO
+
+L<PSGI::Extensions>
+
+=head1 AUTHOR
+
+Robert Rothenberg C<< rrwo@thermeon.com >>
+
+=head1 COPYRIGHT
+
+Copyright 2015, Thermeon Worldwide, PLC.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+This program is distributed in the hope that it will be useful, but
+without any warranty; without even the implied warranty of
+merchantability or fitness for a particular purpose.
+
