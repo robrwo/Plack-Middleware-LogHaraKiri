@@ -56,7 +56,11 @@ sub call {
     return $res
         unless $env->{'psgix.harakiri'} or $env->{'psgix.harakiri.supported'};
 
-    if ($env->{'psgix.harakiri.commit'}) {
+    my $harakiri = $env->{'psgix.harakiri.supported'} ? # Legacy
+        $env->{'psgix.harakiri'} :
+        $env->{'psgix.harakiri.commit'};
+
+    if ($harakiri) {
         my $message = sprintf(
             'pid %d committed harakiri (size: %d, shared: %d, unshared: %d)',
             $$, $self->_check_size
