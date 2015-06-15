@@ -27,6 +27,9 @@ emits a warning when a process is killed.
 When it detects that the current process is killed, it will emit a
 warning with diagnostic information.
 
+Note that this middleware must be enabled before plugins that set the
+"harakiri" flag.
+
 =head1 SEE ALSO
 
 L<PSGI::Extensions>
