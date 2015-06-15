@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  [Other]
   - Add Travis-CI to repo for smoke testing
 
 0.0100    2015-06-15 11:30:47+01:00 Europe/London
