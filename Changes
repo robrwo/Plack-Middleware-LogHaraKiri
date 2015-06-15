@@ -1,4 +1,6 @@
-Revision history for Plack-Middleware-LogHarakiri
+Revision history for {{$dist->name}}
+
+{{$NEXT}}
 
 0.0100    2015-06-15 11:30:47+01:00 Europe/London
   - Initial version
