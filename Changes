@@ -1,8 +1,13 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  [Enhancements]
+  - Include the REQUEST_URI in the log message
+
   [Documentation]
   - Generate README from POD using Pod::Readme
+
+  - Documented format of the warning message
 
   [Other]
   - Add Travis-CI to repo for smoke testing

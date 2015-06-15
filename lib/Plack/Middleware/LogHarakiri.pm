@@ -41,7 +41,9 @@ This middleware is a companion to L<Plack::Middleware::SizeLimit> that
 emits a warning when a process is killed.
 
 When it detects that the current process is killed, it will emit a
-warning with diagnostic information.
+warning with diagnostic information of the form:
+
+  pid %d committed harakiri (size: %d, shared: %d, unshared: %d) at %s
 
 Note that this middleware must be enabled before plugins that set the
 "harakiri" flag.
@@ -81,8 +83,8 @@ sub call {
 
     if ($harakiri) {
         my $message = sprintf(
-            'pid %d committed harakiri (size: %d, shared: %d, unshared: %d)',
-            $$, $self->_check_size
+            'pid %d committed harakiri (size: %d, shared: %d, unshared: %d) at %s',
+            $$, $self->_check_size, $env->{REQUEST_URI},
             );
         if (my $logger = $env->{'psgix.logger'}) {
             $logger->( { message => $message, level => 'warn' } );

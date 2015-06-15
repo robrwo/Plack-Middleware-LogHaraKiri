@@ -18,7 +18,7 @@ my $app = sub {
         'psgix.harakiri' :
         'psgix.harakiri.commit';
 
-    if ($env->{REQUEST_URI} eq '/die') {
+    if ($env->{REQUEST_URI} =~ m{^/die}) {
         $env->{$key} = 1;
     }
 
@@ -32,19 +32,21 @@ ok $app = Plack::Middleware::LogHarakiri->wrap($app), 'wrap';
 
 subtest 'log harakiri message' => sub {
 
+    my $path = '/die-' . time();
+
     my $stderr = capture_stderr {
         test_psgi
             app    => $app,
             client => sub {
                 my ($cb) = @_;
-                my $req = GET 'http://localhost/die';
+                my $req = GET 'http://localhost' . $path;
                 my $res = $cb->($req);
                 is $res->content, 'killed';
                 };
         };
 
     like $stderr,
-        qr/pid $$ committed harakiri \(size: \d+, shared: \d+, unshared: \d+\)/,
+        qr/pid $$ committed harakiri \(size: \d+, shared: \d+, unshared: \d+\) at ${path}/,
         'warning logged';
 
     };
