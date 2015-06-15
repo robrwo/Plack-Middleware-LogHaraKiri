@@ -7,6 +7,8 @@ $Plack::Middleware::LogHarakiri::VERSION = '0.0100';
 
 Plack::Middleware::LogHarakiri - log when a process is killed
 
+=for readme plugin version
+
 =head1 SYNOPSIS
 
   use Plack::Builder;
@@ -18,6 +20,20 @@ Plack::Middleware::LogHarakiri - log when a process is killed
 
     $app;
   };
+
+=begin :readme
+
+=head1 INSTALLATION
+
+See
+L<How to install CPAN modules|http://www.cpan.org/modules/INSTALL.html>.
+
+=for readme plugin requires heading-level=2 title="Required Modules"
+
+=for readme plugin changes
+
+=end :readme
+
 
 =head1 DESCRIPTION
 

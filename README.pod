@@ -2,6 +2,10 @@
 
 Plack::Middleware::LogHarakiri - log when a process is killed
 
+=head1 VERSION
+
+0.0100
+
 =head1 SYNOPSIS
 
   use Plack::Builder;
@@ -13,6 +17,58 @@ Plack::Middleware::LogHarakiri - log when a process is killed
 
     $app;
   };
+
+=head1 INSTALLATION
+
+See
+L<How to install CPAN modules|http://www.cpan.org/modules/INSTALL.html>.
+
+=head2 Required Modules
+
+This distribution requires Perl v5.8.8.
+
+This distribution requires the following modules:
+
+=over 4
+
+=item * L<Capture::Tiny>
+
+=item * L<HTTP::Request::Common>
+
+=item * L<parent>
+
+=item * L<Plack>
+
+=item * L<Plack::Middleware>
+
+=item * L<Process::SizeLimit::Core>
+
+=back
+
+=head1 RECENT CHANGES
+
+=head2 Documentation
+
+=over 4
+
+=item * 
+
+Generate README from POD using Pod::Readme
+
+=back
+
+=head2 Other
+
+=over 4
+
+=item * 
+
+Add Travis-CI to repo for smoke testing
+
+=back
+
+See the F<Changes> file for a longer revision history.
+
 
 =head1 DESCRIPTION
 
