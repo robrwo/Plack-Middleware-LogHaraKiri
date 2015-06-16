@@ -1,7 +1,7 @@
 package Plack::Middleware::LogHarakiri;
 use parent qw/ Plack::Middleware Process::SizeLimit::Core /;
 
-$Plack::Middleware::LogHarakiri::VERSION = '0.0200';
+$Plack::Middleware::LogHarakiri::VERSION = '0.0200_01';
 
 =head1 NAME
 
