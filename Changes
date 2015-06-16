@@ -1,6 +1,8 @@
 Revision history for Plack-Middleware-LogHarakiri
 
 {{$NEXT}}
+  [Bug Fixes]
+  - Added missing strictures
 
 0.0200    2015-06-16 08:49:52+01:00 Europe/London
   [Enhancements]
