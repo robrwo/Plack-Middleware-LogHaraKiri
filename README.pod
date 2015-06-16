@@ -4,7 +4,7 @@ Plack::Middleware::LogHarakiri - log when a process is killed
 
 =head1 VERSION
 
-0.0100
+0.0200
 
 =head1 SYNOPSIS
 
@@ -55,6 +55,20 @@ This distribution requires the following modules:
 
 Generate README from POD using Pod::Readme
 
+=item * 
+
+Documented format of the warning message
+
+=back
+
+=head2 Enhancements
+
+=over 4
+
+=item * 
+
+Include the REQUEST_URI in the log message
+
 =back
 
 =head2 Other
@@ -76,7 +90,9 @@ This middleware is a companion to L<Plack::Middleware::SizeLimit> that
 emits a warning when a process is killed.
 
 When it detects that the current process is killed, it will emit a
-warning with diagnostic information.
+warning with diagnostic information of the form:
+
+  pid %d committed harakiri (size: %d, shared: %d, unshared: %d) at %s
 
 Note that this middleware must be enabled before plugins that set the
 "harakiri" flag.
