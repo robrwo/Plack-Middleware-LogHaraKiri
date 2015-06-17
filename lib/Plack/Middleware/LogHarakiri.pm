@@ -4,7 +4,7 @@ use parent qw/ Plack::Middleware Process::SizeLimit::Core /;
 use strict;
 use warnings;
 
-$Plack::Middleware::LogHarakiri::VERSION = '0.0200_01';
+$Plack::Middleware::LogHarakiri::VERSION = '0.0201';
 
 =head1 NAME
 

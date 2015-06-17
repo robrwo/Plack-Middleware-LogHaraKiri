@@ -4,7 +4,7 @@ Plack::Middleware::LogHarakiri - log when a process is killed
 
 =head1 VERSION
 
-0.0200_01
+0.0201
 
 =head1 SYNOPSIS
 
