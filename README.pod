@@ -4,7 +4,7 @@ Plack::Middleware::LogHarakiri - log when a process is killed
 
 =head1 VERSION
 
-0.0200
+0.0200_01
 
 =head1 SYNOPSIS
 
@@ -47,27 +47,13 @@ This distribution requires the following modules:
 
 =head1 RECENT CHANGES
 
-=head2 Documentation
+=head2 Bug Fixes
 
 =over 4
 
 =item * 
 
-Generate README from POD using Pod::Readme
-
-=item * 
-
-Documented format of the warning message
-
-=back
-
-=head2 Enhancements
-
-=over 4
-
-=item * 
-
-Include the REQUEST_URI in the log message
+Added missing strictures
 
 =back
 
@@ -77,7 +63,7 @@ Include the REQUEST_URI in the log message
 
 =item * 
 
-Add Travis-CI to repo for smoke testing
+Tweaked Travis-CI configuration to test 5.22 and skip 5.10
 
 =back
 
