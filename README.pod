@@ -63,7 +63,7 @@ Added missing strictures
 
 =item * 
 
-Tweaked Travis-CI configuration to test 5.22 and skip 5.10
+Tweaked Travis-CI configuration to skip 5.10
 
 =back
 

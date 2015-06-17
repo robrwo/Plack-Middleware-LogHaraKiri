@@ -5,7 +5,7 @@ Revision history for Plack-Middleware-LogHarakiri
   - Added missing strictures
 
   [Other]
-  - Tweaked Travis-CI configuration to test 5.22 and skip 5.10
+  - Tweaked Travis-CI configuration to skip 5.10
 
 0.0200    2015-06-16 08:49:52+01:00 Europe/London
   [Enhancements]
