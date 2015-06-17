@@ -1,5 +1,12 @@
 Revision history for Plack-Middleware-LogHarakiri
 
+{{$NEXT}}
+  [Bug Fixes]
+  - Added missing strictures
+
+  [Other]
+  - Tweaked Travis-CI configuration to skip 5.10
+
 0.0200    2015-06-16 08:49:52+01:00 Europe/London
   [Enhancements]
   - Include the REQUEST_URI in the log message
