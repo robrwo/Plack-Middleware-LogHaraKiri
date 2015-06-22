@@ -4,7 +4,7 @@ Plack::Middleware::LogHarakiri - log when a process is killed
 
 =head1 VERSION
 
-0.0201
+0.0301
 
 =head1 SYNOPSIS
 
@@ -47,23 +47,13 @@ This distribution requires the following modules:
 
 =head1 RECENT CHANGES
 
-=head2 Bug Fixes
+=head2 Docmentation
 
 =over 4
 
 =item * 
 
-Added missing strictures
-
-=back
-
-=head2 Other
-
-=over 4
-
-=item * 
-
-Tweaked Travis-CI configuration to skip 5.10
+Added note about Plack::Middleware::SizeLimit 0.06's log_when_limits_exceeded option.
 
 =back
 
@@ -72,13 +62,17 @@ See the F<Changes> file for a longer revision history.
 
 =head1 DESCRIPTION
 
-This middleware is a companion to L<Plack::Middleware::SizeLimit> that
-emits a warning when a process is killed.
+This middleware was written a companion to L<Plack::Middleware::SizeLimit>
+that emits a warning when a process is killed.
 
 When it detects that the current process is killed, it will emit a
 warning with diagnostic information of the form:
 
   pid %d committed harakiri (size: %d, shared: %d, unshared: %d) at %s
+
+However, L<Plack::Middleware::SizeLimit> version 0.06 supports a
+C<log_when_limits_exceeded> option, which makes this middleware unnecessary
+for that purpose.
 
 Note that this middleware must be enabled before plugins that set the
 "harakiri" flag.
