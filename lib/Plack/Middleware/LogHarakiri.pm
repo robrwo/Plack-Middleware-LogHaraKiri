@@ -40,13 +40,17 @@ L<How to install CPAN modules|http://www.cpan.org/modules/INSTALL.html>.
 
 =head1 DESCRIPTION
 
-This middleware is a companion to L<Plack::Middleware::SizeLimit> that
-emits a warning when a process is killed.
+This middleware was written a companion to L<Plack::Middleware::SizeLimit>
+that emits a warning when a process is killed.
 
 When it detects that the current process is killed, it will emit a
 warning with diagnostic information of the form:
 
   pid %d committed harakiri (size: %d, shared: %d, unshared: %d) at %s
+
+However, L<Plack::Middleware::SizeLimit> version 0.06 supports a
+C<log_when_limits_exceeded> option, which makes this middleware unnecessary
+for that purpose.
 
 Note that this middleware must be enabled before plugins that set the
 "harakiri" flag.
