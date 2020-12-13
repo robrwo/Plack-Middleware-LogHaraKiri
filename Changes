@@ -1,5 +1,9 @@
 Revision history for Plack-Middleware-LogHarakiri
 
+{{$NEXT}}
+  [ToolChain]
+  - Removed `.travis.yml` from git repo.
+
 0.0301    2015-06-22 18:42:37+01:00 Europe/London
   [Docmentation]
   - Added note about Plack::Middleware::SizeLimit 0.06's
